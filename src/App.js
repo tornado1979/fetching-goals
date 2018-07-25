@@ -12,7 +12,7 @@ class App extends Component {
         <header className="App-header">
           <img alt="logo" className="App-logo" src={logo} />
           <h1 className="App-title">
-            Welcome to React
+            React/redux app that fetches data from express server
           </h1>
         </header>
         <Router>
