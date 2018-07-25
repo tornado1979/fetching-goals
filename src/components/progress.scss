@@ -1,0 +1,13 @@
+//vars
+$orange: #F4D336;
+$blue: #35B8C1;
+
+.progress {
+  background-color: orange;
+  height: 10px;
+  width: 0px;
+
+  &.completed {
+    background-color: $blue;
+  }
+}
