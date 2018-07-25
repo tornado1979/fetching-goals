@@ -1,0 +1,95 @@
+// vars
+$bg: #fff;
+$lightGrey: lightgrey;
+$white: #fff;
+$space-small: 1%;
+
+.goalBlock {
+  background-color: $bg;
+  box-shadow: 1px 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex: 1 23%;
+  flex-flow: column;
+/*  max-width: 23%; // for small screens, i should fix that for desktops
+  width: 23%; */
+  margin: $space-small;
+  min-width: 227px;
+
+  & .goalBlock-img {
+    flex: 1 30%;
+    position: relative;
+    background: $lightGrey;
+
+    & .goalBlock-name {
+      position: absolute;
+      top: 50%;
+      left: 45%;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $white;
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  & .goalBlock-body {
+    flex: 1 30%;
+    padding: 0 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+
+    & .goalBlock-top {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    & .goalBlock-button {
+      text-align: right;
+      top: -17px;
+      position: relative;
+    }
+
+    & .goalBlock-balance {
+      font-weight: 500;
+      &.amount {
+        font-size: 12px;
+        text-align: right;
+      }
+      &:before {
+        content: '£ ';
+        font-size: 12px;
+      }
+      &:after {
+        content: '.00';
+      }
+    }
+
+    & .goalBlock-title {
+      font-weight: 600;
+      margin: 0;
+    }
+
+    & .goalBlock-date {
+      text-align: center;
+      margin: 0;
+      color: rgba(0,0,0,0.6);
+      font-size: 12px;
+    }
+
+    & .goalBlock-text {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+
+    & .view-more {
+      border-top: 1px solid #e3e3e3;
+      padding-top: 16px;
+    }
+  }
+}

@@ -1,11 +1,24 @@
 /* import Roboto fonts */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500);
 
+// vars
+$bodyColor: #f4f4f4; // body background-color
+
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Roboto;
+  background-color: $bodyColor;
 }
+
 .App {
-  text-align: center;
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .App-logo {
@@ -16,10 +29,10 @@ body {
 
 .App-header {
   background-color: #222;
-  height: 50px;
   padding: 20px;
   color: white;
   text-align: left;
+  flex: 100%;
 }
 
 .App-title {
@@ -34,4 +47,22 @@ body {
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+main {
+  min-width:450px;
+  max-width: 100%;
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  & .wrapper {
+    min-width:450px;
+    max-width: 80%;
+    display: flex;
+    width: 80%;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 }
