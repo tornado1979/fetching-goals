@@ -31,9 +31,11 @@ export const GoalCard = ({
   return (
     <div className="goalBlock">
       <div className="goalBlock-img">
-        <div className="goalBlock-name">
-          {goal.name}
-        </div>
+        {!comesFromDetailsPage && (
+          <div className="goalBlock-name">
+            {goal.name}
+          </div>
+        )}
         <img alt={goal.name} src={img} />
       </div>
       {comesFromDetailsPage && (
