@@ -57,6 +57,7 @@ class Info extends Component {
     return (
       <div>
         <GoalCard
+          detailsStyle
           goal={goalInfo || goal}
           key="001"
         />
@@ -65,9 +66,23 @@ class Info extends Component {
   }
 }
 
+Info.defaultProps = {
+  goal: {},
+}
+
 Info.propTypes = {
   getGoalById: propTypes.func.isRequired,
-  goal: propTypes.shape().isRequired,
+  goal: propTypes.shape({
+    amount: propTypes.number,
+    balance: propTypes.number,
+    date: propTypes.string,
+    description: propTypes.string,
+    id: propTypes.string,
+    image_url: propTypes.string,
+    name: propTypes.string,
+    percentage: propTypes.number,
+    status: propTypes.string,
+  }),
   goalId: propTypes.string.isRequired,
 }
 
