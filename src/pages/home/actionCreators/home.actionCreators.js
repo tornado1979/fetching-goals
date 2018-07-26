@@ -60,3 +60,19 @@ export const fetchGoals = (queryString = {}) => (dispatch) => {
     // execute RECEIVE_GOALS_FAIL
     .catch(err => dispatch(error(err)))
 }
+
+export const fetchGoalById = (id = '') => (dispatch) => {
+  // execute REQUEST_GOAL
+  dispatch(requestGoals())
+
+  return axios(`${constants.GOALS_ENDPOINT}/${id}`)
+    .then(response => response.data)
+    .then(goal => {
+      // execute RECEIVE_GOAL
+      dispatch(receiveGoals([goal]))
+      // execute RECEIVE_GOAL_SUCCESS
+      dispatch(receiveGoalsSuccess())
+    })
+    // execute RECEIVE_GOAL_FAIL
+    .catch(err => dispatch(error(err)))
+}
