@@ -13,6 +13,10 @@ $blue: #35B8C1;
   width: 25px;
   padding-bottom: 5px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &.completed {
     background-color: $blue;
   }

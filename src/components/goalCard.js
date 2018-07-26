@@ -2,6 +2,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 import moment from 'moment'
 import Icon from '@material-ui/core/Icon'
+import { Link } from 'react-router-dom'
 
 import { Progress } from './progress'
 import noImageAvailable from '../assets/img/No_Image_Available.jpg'
@@ -11,6 +12,7 @@ export const GoalCard = ({ goal, idx }) => {
   const goalReleaseDate = moment(goal.date)
   const img = !goal.image_url ? noImageAvailable : goal.image_url
   const percentage = parseFloat(goal.percentage) * 100
+  const to = `/goal/${goal.id}`
 
   return (
     <div className="goalBlock" key={idx}>
@@ -22,10 +24,12 @@ export const GoalCard = ({ goal, idx }) => {
       </div>
       <div className="goalBlock-body">
         <div className="goalBlock-button">
-          <CustomButton
-            completed={percentage === 100}
-            link="/"
-          />
+          <Link to={to}>
+            <CustomButton
+              completed={percentage === 100}
+              link="/"
+            />
+          </Link>
         </div>
         <div className="wrap-goalBlock-top">
           <div>
