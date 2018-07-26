@@ -10,8 +10,6 @@ $space-small: 1%;
   display: flex;
   flex: 1 23%;
   flex-flow: column;
-/*  max-width: 23%; // for small screens, i should fix that for desktops
-  width: 23%; */
   margin: $space-small;
   min-width: 227px;
 
@@ -42,11 +40,6 @@ $space-small: 1%;
     flex-flow: column nowrap;
     justify-content: space-around;
 
-    & .goalBlock-top {
-      display: flex;
-      justify-content: flex-start;
-    }
-
     & .goalBlock-button {
       text-align: right;
       top: -17px;
@@ -54,7 +47,7 @@ $space-small: 1%;
     }
 
     & .goalBlock-balance {
-      font-weight: 500;
+      font-weight: 600;
       &.amount {
         font-size: 12px;
         text-align: right;
@@ -89,7 +82,51 @@ $space-small: 1%;
 
     & .view-more {
       border-top: 1px solid #e3e3e3;
-      padding-top: 16px;
+      padding: 16px 0;
+    }
+
+    // fixes for details page
+    &.details {
+      & div {
+        margin-bottom: 15px;
+      }
+
+      flex: 1 30%;
+      padding: 0 10px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+
+      .wrap-goalBlock-top {
+        & div {
+          display: inline-block;
+          box-sizing: border-box;
+          width: 50%;
+
+          &:nth-child(1) {
+            text-align: left;
+          }
+          &:nth-child(2) {
+            text-align: right;
+          }
+        }
+      }
+
+      & .goalBlock-button {
+        top: 0;
+      }
+
+      & .goalBlock-title {
+        text-transform: capitalize;
+      }
+
+      & .goalBlock-description {
+        opacity: 0.5;
+      }
+
+      & .goalBlock-date {
+        text-align: right;
+      }
     }
   }
 }
