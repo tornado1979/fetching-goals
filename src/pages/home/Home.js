@@ -28,11 +28,11 @@ class Home extends Component {
     let goalsDOM
 
     if (goals && goals.length > 0) {
-      goalsDOM = goals.map((goal, idx) => {
+      goalsDOM = goals.map((goal) => {
         return (
           <GoalCard
             goal={goal}
-            key={idx}
+            key={goal.id}
           />
         )
       })
