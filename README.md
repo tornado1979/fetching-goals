@@ -5,6 +5,15 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## * I have to update the readme soon, with images and gifs, currently a small presentation video is on youtube: https://youtu.be/MN1CbCrfjl8
 
+* This app consists of two pages:
+ - Home page, where the cards are displayed 1st gif.
+ - Details page 2nd gif.
+
+ ![Home page](readme_staff/home-page.gif)
+
+ ![Details page](readme_staff/details-page.gif)
+
+
 
 ## Table of Contents
 
