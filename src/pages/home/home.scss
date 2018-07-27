@@ -2,34 +2,53 @@
 $bg: #fff;
 $lightGrey: lightgrey;
 $white: #fff;
-$space-small: 1%;
+$footer: #CBCBCB;
+$space-small: 2%;
+$block-width: 250px;
+$block-height: 300px;
+$radius: 7px;
+$center: 50%;
 
 .goalBlock {
   background-color: $bg;
-  box-shadow: 1px 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 2px 3px 10px rgba(0,0,0,0.2);
   display: flex;
   flex: 1 23%;
   flex-flow: column;
   margin: $space-small;
-  min-width: 227px;
+  max-width: $block-width;
+  min-width: $block-width;
+  max-height: $block-height;
+  border-radius: $radius;
+  overflow: hidden;
 
   & .goalBlock-img {
     flex: 1 30%;
     position: relative;
     background: $lightGrey;
+    height: $center;
+    overflow: hidden;
+    object-fit: none;
+
+    &.img-center {
+      object-position: $center $center;
+    }
 
     & .goalBlock-name {
       position: absolute;
-      top: 50%;
-      left: 45%;
-      text-align: center;
+      top: $center;
+      left: $center;
+      transform: translateX(-$center);
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 500;
       color: $white;
     }
 
     & img {
       width: 100%;
+      height: 100%;
+      object-fit: none;
+      object-position: $center $center;
     }
   }
 
@@ -39,10 +58,11 @@ $space-small: 1%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
+    height: $center;
 
     & .goalBlock-button {
       text-align: right;
-      top: -17px;
+      top: -3px;
       position: relative;
     }
 
@@ -69,7 +89,7 @@ $space-small: 1%;
     & .goalBlock-date {
       text-align: center;
       margin: 0;
-      color: rgba(0,0,0,0.6);
+      font-weight: 500;
       font-size: 12px;
     }
 
@@ -80,8 +100,8 @@ $space-small: 1%;
       -webkit-box-orient: vertical;
     }
 
-    & .view-more {
-      border-top: 1px solid #e3e3e3;
+    & .goalBlock-footer {
+      color: $footer;
       padding: 16px 0;
     }
 
@@ -101,7 +121,7 @@ $space-small: 1%;
         & div {
           display: inline-block;
           box-sizing: border-box;
-          width: 50%;
+          width: $center;
 
           &:nth-child(1) {
             text-align: left;

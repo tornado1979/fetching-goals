@@ -76,7 +76,7 @@ export const GoalCard = ({
             </p>
           </div>
         </div>
-        <div className="view-more">
+        <div className="goalBlock-footer">
           <p className="goalBlock-date">
             {goal.date && `By ${goalReleaseDate.format('Do MMM YYYY')}`}
             {!goal.date
@@ -115,7 +115,7 @@ export const GoalCard = ({
         <p className="goalBlock-balance amount">
           {goal.amount}
         </p>
-        <div className="view-more">
+        <div className="goalBlock-footer">
           <p className="goalBlock-date">
             {goal.date && `By ${goalReleaseDate.format('Do MMM YYYY')}`}
             {!goal.date
