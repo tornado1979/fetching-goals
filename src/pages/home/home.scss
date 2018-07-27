@@ -2,7 +2,8 @@
 $bg: #fff;
 $lightGrey: lightgrey;
 $white: #fff;
-$footer: #CBCBCB;
+$footer1: #CBCBCB;
+$footer2: #8D8D8D;
 $space-small: 2%;
 $block-width: 250px;
 $block-height: 300px;
@@ -18,6 +19,14 @@ $font-weight600: 600;
     max-height: 100%;
     border-radius: 0;
     margin: 0;
+
+    & .goalBlock-img {
+
+      img {
+        object-fit: cover;
+      }
+
+    }
   }
 
   background-color: $bg;
@@ -111,7 +120,7 @@ $font-weight600: 600;
     }
 
     & .goalBlock-footer {
-      color: $footer;
+      color: $footer1;
       padding: 16px 0;
     }
 
@@ -128,10 +137,12 @@ $font-weight600: 600;
       justify-content: space-around;
 
       .wrap-goalBlock-top {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+
         & div {
-          display: inline-block;
           box-sizing: border-box;
-          width: $center;
 
           &:nth-child(1) {
             text-align: left;
@@ -148,12 +159,20 @@ $font-weight600: 600;
       }
 
       & .goalBlock-title {
+        margin-top: 16px;
         text-transform: capitalize;
       }
 
       & .goalBlock-description {
         font-weight: $font-weight500;
-        opacity: 0.5;
+      }
+
+      .amount:before {
+        content: '/ £';
+      }
+
+      & .goalBlock-footer {
+        color: $footer2;
       }
 
       & .goalBlock-date {
