@@ -8,8 +8,18 @@ $block-width: 250px;
 $block-height: 300px;
 $radius: 7px;
 $center: 50%;
+$font-weight500: 500;
+$font-weight600: 600;
 
 .goalBlock {
+
+  &.details {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+
   background-color: $bg;
   box-shadow: 2px 3px 10px rgba(0,0,0,0.2);
   display: flex;
@@ -28,7 +38,6 @@ $center: 50%;
     background: $lightGrey;
     height: $center;
     overflow: hidden;
-    object-fit: none;
 
     &.img-center {
       object-position: $center $center;
@@ -40,7 +49,7 @@ $center: 50%;
       left: $center;
       transform: translateX(-$center);
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: $font-weight500;
       color: $white;
     }
 
@@ -67,10 +76,11 @@ $center: 50%;
     }
 
     & .goalBlock-balance {
-      font-weight: 600;
+      font-weight: $font-weight600;
       &.amount {
         font-size: 12px;
         text-align: right;
+        font-weight: $font-weight500;
       }
       &:before {
         content: '£ ';
@@ -82,14 +92,14 @@ $center: 50%;
     }
 
     & .goalBlock-title {
-      font-weight: 600;
+      font-weight: $font-weight600;
       margin: 0;
     }
 
     & .goalBlock-date {
       text-align: center;
       margin: 0;
-      font-weight: 500;
+      font-weight: $font-weight500;
       font-size: 12px;
     }
 
@@ -133,6 +143,7 @@ $center: 50%;
       }
 
       & .goalBlock-button {
+        margin-top: 15px;
         top: 0;
       }
 
@@ -141,6 +152,7 @@ $center: 50%;
       }
 
       & .goalBlock-description {
+        font-weight: $font-weight500;
         opacity: 0.5;
       }
 

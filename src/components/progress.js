@@ -4,17 +4,18 @@ import classnames from 'classnames'
 
 import './progress.scss'
 
-export const Progress = ({ percentage }) => {
+export const Progress = ({ percentage, height }) => {
   const styles = classnames(
     'progress',
     { completed: percentage === 100 },
   )
 
   return (
-    <div className={styles} style={{ width: `${percentage}%` }} />
+    <div className={styles} style={{ width: `${percentage}%`, height: `${height}px` }} />
   )
 }
 
 Progress.propTypes = {
+  height: propTypes.number.isRequired,
   percentage: propTypes.number.isRequired,
 }

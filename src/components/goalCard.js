@@ -24,12 +24,17 @@ export const GoalCard = ({
     fontSize: '15px',
   }
 
+  const blockStyle = classnames(
+    'goalBlock',
+    { details: detailsStyle },
+  )
+
   const bodyStyle = classnames(
     'goalBlock-body',
     { details: detailsStyle },
   )
   return (
-    <div className="goalBlock">
+    <div className={blockStyle}>
       <div className="goalBlock-img">
         {!comesFromDetailsPage && (
           <div className="goalBlock-name">
@@ -37,14 +42,15 @@ export const GoalCard = ({
           </div>
         )}
         <img alt={goal.name} src={img} />
-      </div>
-      {comesFromDetailsPage && (
-      <div className={bodyStyle}>
         <div>
           <Progress
+            height={4}
             percentage={percentage}
           />
         </div>
+      </div>
+      {comesFromDetailsPage && (
+      <div className={bodyStyle}>
         {completed
           && (
           <div className="goalBlock-button">
@@ -109,6 +115,7 @@ export const GoalCard = ({
         </div>
         <div>
           <Progress
+            height={10}
             percentage={percentage}
           />
         </div>

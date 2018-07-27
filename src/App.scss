@@ -3,7 +3,7 @@
 
 // vars
 $bodyColor: #f4f4f4; // body background-color
-
+$bodyFontsColor: #8D8D8D;
 
 * {
   box-sizing: border-box;
@@ -11,6 +11,7 @@ $bodyColor: #f4f4f4; // body background-color
 
 body {
   font-family: Roboto;
+  color: $bodyFontsColor;
   background-color: $bodyColor;
 }
 

@@ -55,7 +55,7 @@ class Info extends Component {
 
     // if goal data exists on one of 'goalInfo' or 'goal', i display on screen
     return (
-      <div>
+      <div style={{ width: '100%' }}>
         <GoalCard
           detailsStyle
           goal={goalInfo || goal}
